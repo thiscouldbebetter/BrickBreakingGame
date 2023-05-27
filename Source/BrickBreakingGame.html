@@ -1,0 +1,56 @@
+<html>
+<body>
+
+<div>
+	<h3>Brick-Breaking Game</h3>
+
+	<p>
+		Use the left and right arrows to move the paddle, and bounce
+		the ball into the bricks, and to prevent the ball from leaving
+		the field of play.  Break all the bricks to win.
+	</p>
+</div>
+
+<script type="text/javascript" src="Activity.js"></script>
+<script type="text/javascript" src="Actor.js"></script>
+<script type="text/javascript" src="ArrayExtensions.js"></script>
+<script type="text/javascript" src="CollisionHelper.js"></script>
+<script type="text/javascript" src="Coords.js"></script>
+<script type="text/javascript" src="Display.js"></script>
+<script type="text/javascript" src="Globals.js"></script>
+<script type="text/javascript" src="InputHelper.js"></script>
+<script type="text/javascript" src="Obstacle.js"></script>
+<script type="text/javascript" src="Polar.js"></script>
+<script type="text/javascript" src="Projectile.js"></script>
+<script type="text/javascript" src="World.js"></script>
+
+Coords
+
+
+<script type="text/javascript">
+ 
+// main
+ 
+function main()
+{
+	var displaySize = new Coords(200, 400);
+	 
+	var display = new Display(displaySize);
+	 
+	var world = World.random(displaySize);
+	 
+	Globals.Instance.initialize
+	(
+		10, // ticksPerSecond
+		display,
+		world
+	);
+}
+
+// run
+
+main();
+
+</script>
+</body>
+</html>
