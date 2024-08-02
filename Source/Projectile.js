@@ -33,7 +33,7 @@ class Projectile
 
 	updateForTimerTick_Collisions(world)
 	{
-		var collisionHelper = CollisionHelper.Instance;
+		var collisionHelper = CollisionHelper.Instance();
 
 		var obstacles = world.obstacles;
 

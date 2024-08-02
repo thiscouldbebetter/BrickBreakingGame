@@ -8,7 +8,14 @@ class CollisionHelper
 		this.edgeRight = new Coords();
 	}
 
-	static Instance = new CollisionHelper();
+	static Instance()
+	{
+		if (this._instance == null)
+		{
+			this._instance = new CollisionHelper();
+		}
+		return this._instance;
+	}
 
 	doCirclesCollide
 	(
